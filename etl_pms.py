@@ -1,7 +1,7 @@
 import ssl
 import pandas as pd
 import requests as rq
-from datetime import date, datetime
+from datetime import datetime
 
 class TLSAdapter(rq.adapters.HTTPAdapter):
     def init_poolmanager(self, *args, **kwargs):
@@ -126,7 +126,7 @@ def executando_loop_datas():
 dados_limpos_7167, dados_limpos_dados_brutos_7168= executando_loop_datas()
 dataframe = gerando_dataframe(dados_limpos_7167, dados_limpos_dados_brutos_7168)
 dataframe.to_excel('C:\\Users\\LucasFreitas\\Documents\\Lucas Freitas Arquivos\\DATAHUB\\TABELAS\\TABELAS EM CSV\\PMS.xlsx', index=False)
-
+print(dataframe)
 if __name__ == '__main__':
     from sql import executar_sql
     executar_sql()

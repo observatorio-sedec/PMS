@@ -1,1 +1,3 @@
-conexão.py
+conexao.py
+.env
+__pycache__/

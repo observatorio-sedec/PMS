@@ -1,4 +1,4 @@
-from conexão import conexao
+from conexao import conexao
 import psycopg2
 from etl_pms import dataframe
 
@@ -16,7 +16,8 @@ def executar_sql():
     unidade VARCHAR(50),
     pms_numero_indice NUMERIC,
     data_indicador date,
-    pms_numero_indice_ajustado NUMERIC);
+    pms_numero_indice_ajustado NUMERIC
+    );
     '''
     
     cur.execute(dados_pms)
